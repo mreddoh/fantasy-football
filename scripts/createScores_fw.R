@@ -19,26 +19,9 @@ draftSelections <- draftSelections %>% mutate(Team = replace_teams(Team),
                                               Selection = ifelse(is.na(Team)==T,replace_teams(Selection),Selection))
 
 #TRADES
-trade1 <- c("2021-03-25","Thomas","Mitch Lewis","Orazio Fantasia","Port Adelaide")
-trade2 <- c("2021-03-25","Thomas","Jake Stringer","Sam Reid","Sydney")
-trade3 <- c("2021-03-25","Chantel","Marcus Bontempelli","Isaac Heeney","Sydney")
-trade4 <- c("2021-03-25","Michael","Ben Brown","Tom McDonald","Melbourne")
-trade5 <- c("2021-03-25","Lachie","Nick Larkey","Lance Franklin","Sydney")
-
-trade6 <- c("2021-04-01","Chantel","Marc Murphy","Josh Bruce","Footscray")
-trade7 <- c("2021-04-01","Peter","Cam Rayner","Shane McAdam","Adelaide")
-trade8 <- c("2021-04-01","Marcus","Jack Martin","Michael Gibbons","Carlton")
-trade9 <- c("2021-04-01","Cath","Jamie Cripps","Logan McDonald","Sydney")
-trade10 <- c("2021-04-01","Cath","Gary Rohan","Marcus Bontempelli","Footscray")
+Trades <- read.csv(here("data","trades.csv"), na.strings = "", check.names = F)
 
 
-
-Trades <- as.data.frame(do.call(rbind, mget(ls()[substr(ls(),1,5)=="trade"])),stringsAsFactors = FALSE) %>% 
-  mutate(V5 = replace_teams(V5)) %>% arrange(V1)
-
-names(Trades) = c("tradeDt","coach","out","in","team")
-
-rm(list=ls(pattern="trade"))
 
 liveScores_Temp <- fetch_player_stats(season = 2021, source = "footywire")
 
