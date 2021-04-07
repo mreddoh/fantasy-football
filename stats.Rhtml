@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fantasy Football | 2021</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  </head>
+    <style>
+      h1 {
+        font-family: arial;
+        margin-left: 15px;
+      }
+      h3 {
+        font-family: arial;
+        margin-left: 15px;
+      }
+      table {
+        font-family: arial;
+        margin-left: 15px;
+      }
+      th {
+        height: 30px;
+        padding: 0px 5px 0px 5px;
+      }
+      td {
+        height: 25px;
+        padding: 0px 5px 0px 5px;
+      }
+      p {
+        font-family: arial;
+        margin-left: 15px;
+      }
+      a {
+        text-decoration: none;
+        font-family: courier;
+        margin-left: 15px;
+      }
+      a:link {
+        color: #AAAAAA;
+        font-weight: bold;
+        border-bottom: none;
+      }
+      a:visited {
+        color: #A9BA9D;
+        border-bottom: none;
+      }
+      a:hover {
+        color: #000000;
+        font-weight: bold;
+        border-bottom: none;
+      }
+    </style>
+    <h1>Fantasy Football <span style="color: #AAAAAA;">| 2021</span></h1>
+
+      <a href="index.html"><span style="color: #000000;">H</span>OME</a>
+      <a href="rules.html"><span style="color: #000000;">R</span>ULES</a>
+      <a href="ladder.html"><span style="color: #000000;">L</span>ADDER</a>
+      <a href="scores.html"><span style="color: #000000;">S</span>CORES</a>
+      <a href="trades.html"><span style="color: #000000;">T</span>RADES</a>
+      <a href="stats.html"><span style="color: #000000;">STATS</span></a>
+      <a href="teams.html"><span style="color: #000000;">T</span>EAMS</a>
+      <a href="draft.html"><span style="color: #000000;">D</span>RAFT</a>
+      <a href="availability.html"><span style="color: #000000;">A</span>VAILABILITY</a>
+      <a href="motm.html"><span style="color: #000000;">M</span>OTM</a>
+      <a href="history.html"><span style="color: #000000;">H</span>ALL OF FAME</a>
+      
+      <br><br><br>
+
+
+<!--begin.rcode fig.width=7, fig.height=6, echo=FALSE, message=FALSE
+library(kableExtra)
+end.rcode-->
+
+<h3>Top 10 Players:</h3>
+<!--begin.rcode fig.width=7, fig.height=6, echo=FALSE, results='asis'
+top_players %>% 
+  kbl(., align='lcc', escape = F) %>%
+  column_spec(1, width = "200px") %>%
+  column_spec(2:3, width = "100px") %>%
+  row_spec(0, color = "white", background = "#000000") %>%
+  row_spec(1:nrow(top_players), color = "black", background = "#ffff")
+end.rcode-->
+
+<h3>Top 10 Team Defences:</h3>
+<!--begin.rcode fig.width=7, fig.height=6, echo=FALSE, results='asis'
+top_teams %>% 
+  kbl(., align='lc', escape = F) %>%
+  column_spec(1, width = "312px") %>%
+  column_spec(2, width = "100px") %>%
+  row_spec(0, color = "white", background = "#000000") %>%
+  row_spec(1:nrow(top_teams), color = "black", background = "#ffff")
+end.rcode-->
+
+<h3>Top 10 Free Agents (Players):</h3>
+<!--begin.rcode fig.width=7, fig.height=6, echo=FALSE, results='asis'
+top_fa_players %>% 
+  kbl(., align='lcc', escape = F) %>%
+  column_spec(1, width = "200px") %>%
+  column_spec(2:3, width = "100px") %>%
+  row_spec(0, color = "white", background = "#000000") %>%
+  row_spec(1:nrow(top_fa_players), color = "black", background = "#ffff")
+end.rcode-->
+
+<h3>Top Free Agents (Team Defences):</h3>
+<!--begin.rcode fig.width=7, fig.height=6, echo=FALSE, results='asis'
+top_fa_teams %>% 
+  kbl(., align='lc', escape = F) %>%
+  column_spec(1, width = "312px") %>%
+  column_spec(2, width = "100px") %>%
+  row_spec(0, color = "white", background = "#000000") %>%
+  row_spec(1:nrow(top_fa_teams), color = "black", background = "#ffff")
+end.rcode-->
+
+<br>
+
+</html>
