@@ -9,6 +9,8 @@ library(lubridate)
 library(here)
 library(stringdist)
 
+ssn = 2021
+
 load(here("data","squadLists.Rdata"))
 
 draftSelections <- read.csv(here("data","draft.csv"), na.strings = "") %>% 
@@ -21,30 +23,29 @@ draftSelections <- draftSelections %>% mutate(Team = replace_teams(Team),
 #TRADES
 Trades <- read.csv(here("data","trades.csv"), na.strings = "", check.names = F)
 
-
-
-liveScores_Temp <- fetch_player_stats(season = 2021, source = "footywire")
+liveScores_Temp <- fetch_player_stats(season = ssn, source = "footywire")
 
 maxRound <- liveScores_Temp %>% 
   mutate(Round = as.integer(regmatches(Round, gregexpr("[[:digit:]]+", Round)))) %>% 
   summarise(max(Round)) %>% pull()
          
-roundDetails <- fetch_fixture(season = 2021, source = "footywire") %>%
+roundDetails <- fetch_fixture(season = ssn, source = "footywire") %>%
   mutate(Season = year(Date),
          Date = as.Date(Date)) %>% 
   group_by(Season, Round) %>% 
   summarise(roundStart = min(Date))
 
-
 if(exists("Trades") == T) {
   
-    for (r in 1:nrow(roundDetails)){  
+    for (r in 1:maxRound){  
       
       if(r == 1) { tempTrades <- Trades }
       
-      minDate <- roundDetails %>% filter(Round == r) %>% pull()
-      
-      roundTrades <- tempTrades %>% filter(tradeDt <= minDate)
+      minDate <- roundDetails %>% filter(Round == r) %>% mutate(roundStart = as.character(roundStart)) %>% pull(roundStart)
+      if(r > 1) { prvDate <- roundDetails %>% filter(Round == r - 1) %>% mutate(roundStart = as.character(roundStart)) %>% pull(roundStart)}
+      if(r == 1) { prvDate <- "2021-01-01" }
+        
+      roundTrades <- tempTrades %>% filter(tradeDt <= minDate & tradeDt > prvDate)
       
       tempTrades <- setdiff(tempTrades, roundTrades)
       
@@ -103,12 +104,12 @@ teamScore <- liveScores_Temp %>%
   select(Round, Team, Points) %>% 
   left_join(Teams %>% filter(is.na(Team)==T),.,by=c("Round","Selection"="Team"))
 
-
 Scores <- bind_rows(playerScore, teamScore) %>% 
   filter(is.na(Points)==F) %>% 
   mutate(Points = ifelse(is.na(Points)==T,0,Points)) %>% 
   group_by(Round, Coach) %>% 
-  summarise(Points = sum(Points))
+  summarise(Points = sum(Points)) %>% 
+  ungroup()
 
 Ladder <- bind_rows(playerScore, teamScore) %>% 
   filter(is.na(Points)==F) %>% 
@@ -187,3 +188,9 @@ playerStatus <- squadLists %>%
   left_join(., currentTeams, by=c("Player"="Selection","Team")) %>% 
   mutate(Status = ifelse(is.na(Coach)==F, paste0("Not Available (",Coach,")"), "Free Agent (Available)")) %>% 
   select(Player, Team, Status)
+
+
+### PRINT SCORES
+Scores %>% filter(Round == maxRound) %>% select(-Round) %>% arrange(-Points)
+Ladder %>% arrange(-Points)
+
