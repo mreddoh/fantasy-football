@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fantasy Football | 2021</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  </head>
+    <style>
+      h1 {
+        font-family: arial;
+        margin-left: 15px;
+      }
+      h3 {
+        font-family: arial;
+        margin-left: 15px;
+      }
+      table {
+        font-family: arial;
+        margin-left: 15px;
+      }
+      th {
+        height: 30px;
+        padding: 0px 5px 0px 5px;
+      }
+      td {
+        height: 25px;
+        padding: 0px 5px 0px 5px;
+      }
+      p {
+        font-family: arial;
+        margin-left: 15px;
+      }
+      a {
+        text-decoration: none;
+        font-family: courier;
+        margin-left: 15px;
+      }
+      a:link {
+        color: #AAAAAA;
+        font-weight: bold;
+        border-bottom: none;
+      }
+      a:visited {
+        color: #A9BA9D;
+        border-bottom: none;
+      }
+      a:hover {
+        color: #000000;
+        font-weight: bold;
+        border-bottom: none;
+      }
+    </style>
+    <h1>Fantasy Football <span style="color: #AAAAAA;">| 2021</span></h1>
+
+      <a href="index.html"><span style="color: #000000;">H</span>OME</a>
+      <a href="rules.html"><span style="color: #000000;">R</span>ULES</a>
+      <a href="ladder.html"><span style="color: #000000;">L</span>ADDER</a>
+      <a href="scores.html"><span style="color: #000000;">S</span>CORES</a>
+      <a href="trades.html"><span style="color: #000000;">T</span>RADES</a>
+      <a href="stats.html"><span style="color: #000000;">S</span>TATS</a>
+      <a href="teams.html"><span style="color: #000000;">T</span>EAMS</a>
+      <a href="draft.html"><span style="color: #000000;">D</span>RAFT</a>
+      <a href="availability.html"><span style="color: #000000;">A</span>VAILABILITY</a>
+      <a href="motm.html"><span style="color: #000000;">MOTM</span></a>
+      <a href="history.html"><span style="color: #000000;">H</span>ALL OF FAME</a>
+      
+      <br><br><br>
+      
+<!--begin.rcode fig.width=7, fig.height=6, echo=FALSE, results='asis', message=FALSE
+
+library(kableExtra)
+
+MOTM <- roundDetails %>% ungroup() %>% filter(roundStart < today()) %>% 
+  mutate(MOTM = case_when(substr(roundStart,1,7) == "2021-04" ~ "Manager of the Month | April",
+                          substr(roundStart,1,7) == "2021-05" ~ "Manager of the Month | May",
+                          substr(roundStart,1,7) == "2021-06" ~ "Manager of the Month | June",
+                          substr(roundStart,1,7) == "2021-07" ~ "Manager of the Month | July",
+                          TRUE ~ "EXCLUDE")) %>% 
+  filter(MOTM != "EXCLUDE") %>% 
+  select(Round,MOTM)
+  
+for (i in 1:length(unique(MOTM$MOTM))){
+  
+Month <- MOTM %>% select(MOTM) %>% unique() %>% pull() %>% .[i]
+
+out <- Scores %>% 
+  ungroup() %>% 
+  filter(Round %in% (subset(MOTM,MOTM==Month)[,"Round"] %>% pull())) %>% 
+  mutate(Points = as.integer(Points)) %>% 
+  group_by(Coach) %>% 
+  summarise(Points = sum(Points)) %>%
+  arrange(-Points) %>% 
+  kbl(., align='lc', escape = F) %>%
+  column_spec(1, width = "150px") %>%
+  column_spec(2, width = "75px") %>%
+  row_spec(0, color = "white", background = "#000000") %>%
+  row_spec(1:length(unique(Scores$Coach)), color = "black", background = "#ffff")
+
+  hdr <- paste0("<h3>",Month,"</h3>")
+  
+  cat(hdr)
+  cat(out)
+  cat("<br>")
+  
+}
+
+end.rcode-->
+
+
+</html>
