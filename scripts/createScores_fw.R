@@ -158,7 +158,8 @@ top_fa_players <- liveScores_Temp %>%
   rename(Player = Player.y) %>% 
   group_by(Player) %>% 
   summarise(Played = n(),
-            Points = sum(Points)) %>% 
+            Points = sum(Points),
+            PointsPerGame = Points / Played) %>% 
   select(Player,Played,Points) %>% 
   arrange(-Points) %>% 
   head(10)
@@ -193,4 +194,6 @@ playerStatus <- squadLists %>%
 ### PRINT SCORES
 Scores %>% filter(Round == maxRound) %>% select(-Round) %>% arrange(-Points)
 Ladder %>% arrange(-Points)
-Scores %>% filter(Round %in% c(3,4,5,6)) %>% group_by(Coach) %>% summarise(Points = sum(Points)) %>% arrange(-Points)
+Scores %>% filter(Round %in% c(3,4,5,6,7)) %>% group_by(Coach) %>% summarise(Points = sum(Points)) %>% arrange(-Points)
+Scores %>% filter(Round %in% c(8,9,10,11)) %>% group_by(Coach) %>% summarise(Points = sum(Points)) %>% arrange(-Points)
+Scores %>% filter(Round %in% c(12,13,14,15)) %>% group_by(Coach) %>% summarise(Points = sum(Points)) %>% arrange(-Points)
