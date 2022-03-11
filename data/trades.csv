@@ -35,9 +35,9 @@ tradeDt,coach,out,in,team
 2021-05-07,Thomas,West Coast,GWS,
 2021-05-14,Cath,Tim English,Jordan De Goey,Collingwood
 2021-05-14,Marcus,Christian Petracca,Eddie Betts,Carlton
-2021-05-14,Michael,Jason Castagna,Todd Marshall,Port Adelaide
-2021-05-21,Cath,Jason Castagna,Cody Weightman,Footscray
-2021-05-21,Cath,Sydney,Gold Coast,
+2021-05-14,Michael,Jason Castagna,Todd Marshall,
+2021-05-21,Cath,Ben Brown,Cody Weightman,Footscray
+2021-05-21,Cath,Gold Coast,Sydney,
 2021-05-21,Michael,Todd Marshall,Jason Castagna,Richmond
 2021-05-21,Michael,Jake Stringer,Daniel McStay,Brisbane Lions
 2021-05-21,Stuart,Jaidyn Stephenson,Josh Corbett,Gold Coast
@@ -51,4 +51,34 @@ tradeDt,coach,out,in,team
 2021-06-04,Michael,Harry Himmelberg,Callum Coleman-Jones,Richmond
 2021-06-04,Marcus,Josh J. Kennedy,Harrison Jones,Essendon
 2021-06-04,Cath,Daniel Rioli,Jake Aarts,Richmond
-2021-06-04,Cath,Ben Brown,Jack Petruccelle,West Coast
+2021-06-04,Cath,Cody Weightman,Jack Petruccelle,West Coast
+2021-06-10,Michael,Daniel McStay,Izak Rankine,Gold Coast
+2021-06-10,Thomas,Orazio Fantasia,Jamie Elliott,Collingwood
+2021-06-10,Marcus,Alex Sexton,Christian Petracca,Melbourne
+2021-06-10,Marcus,Harrison Jones,Harry Himmelberg,GWS
+2021-06-10,Cath,Jake Aarts,Josh J. Kennedy,West Coast
+2021-06-18,Stuart,Jack Higgins,Jaidyn Stephenson,Collingwood
+2021-06-24,Chantel,Robbie Gray,Darcy Cameron,Collingwood
+2021-07-01,Stuart,Jaidyn Stephenson,Connor Rozee,Port Adelaide
+2021-07-01,Thomas,Liam Ryan,Tom J. Lynch,Richmond
+2021-07-01,Thomas,GWS,Collingwood,
+2021-07-08,Michael,Callum Coleman-Jones,Jamarra Ugle-Hagan,Footscray
+2021-07-08,Peter,Jeremy Cameron,Jack Martin,Carlton
+2021-07-08,Peter,Shane McAdam,Ben Brown,Melbourne
+2021-07-15,Stuart,Connor Rozee,Rory Lobb,Fremantle
+2021-07-23,Stuart,Rory Lobb,Connor Rozee,Port Adelaide
+2021-07-23,Marcus,Tim Membrey,Patrick Dangerfield,Geelong
+2021-07-23,Chantel,Dustin Martin,Jamie Cripps,West Coast
+2021-07-23,Thomas,Riley Thilthorpe,Zac Bailey,Brisbane Lions
+2021-07-23,Michael,Eric Hipwood,Jesse Hogan,GWS
+2021-07-23,Michael,Izak Rankine,Cameron Zurhaar,North Melbourne
+2021-07-23,Lachy,Jeremy Finlayson,Nick Larkey,North Melbourne
+2021-07-30,Marcus,Eddie Betts,Daniel Lloyd,GWS
+2021-07-30,Marcus,Jacob Koschitzke,Lincoln McCarthy,Brisbane Lions
+2021-07-30,Thomas,Cale Hooker,Charlie Curnow,Carlton
+2021-07-30,Thomas,Collingwood,GWS,
+2021-08-06,Thomas,Jamie Elliott,Eddie Betts,Carlton
+2021-08-06,Marcus,Daniel Lloyd,Jacob Koschitzke,Hawthorn
+2021-08-13,Chantel,Josh Bruce,Jeremy Cameron,Geelong
+2021-08-13,Chantel,Luke Breust,Liam Ryan,West Coast
+2021-08-20,Peter,Harry McKay,Peter Wright,Essendon

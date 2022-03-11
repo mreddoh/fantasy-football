@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<style type="text/css">
+.inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}
+.warning {
+	font-weight: bold;
+}
+.message {
+	font-style: italic;
+}
+.source, .output, .warning, .error, .message {
+	padding: 0 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f5f5f5;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+.hl.num {
+  color: #AF0F91;
+}
+.hl.str {
+  color: #317ECC;
+}
+.hl.com {
+  color: #AD95AF;
+  font-style: italic;
+}
+.hl.opt {
+  color: #000000;
+}
+.hl.std {
+  color: #585858;
+}
+.hl.kwa {
+  color: #295F94;
+  font-weight: bold;
+}
+.hl.kwb {
+  color: #B05A65;
+}
+.hl.kwc {
+  color: #55aa55;
+}
+.hl.kwd {
+  color: #BC5A65;
+  font-weight: bold;
+}
+</style>
+    <title>Fantasy Football | 2021</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  </head>
+    <style>
+      h1 {
+        font-family: arial;
+        margin-left: 15px;
+      }
+      h3 {
+        font-family: arial;
+        margin-left: 15px;
+      }
+      table {
+        font-family: arial;
+        margin-left: 15px;
+      }
+      th {
+        height: 30px;
+        padding: 0px 5px 0px 5px;
+      }
+      td {
+        height: 25px;
+        padding: 0px 5px 0px 5px;
+      }
+      p {
+        font-family: arial;
+        margin-left: 15px;
+      }
+      a {
+        text-decoration: none;
+        font-family: courier;
+        margin-left: 15px;
+      }
+      a:link {
+        color: #AAAAAA;
+        font-weight: bold;
+        border-bottom: none;
+      }
+      a:visited {
+        color: #A9BA9D;
+        border-bottom: none;
+      }
+      a:hover {
+        color: #000000;
+        font-weight: bold;
+        border-bottom: none;
+      }
+    </style>
+    <h1>Fantasy Football <span style="color: #AAAAAA;">| 2021</span></h1>
+
+      <a href="index.html"><span style="color: #000000;">H</span>OME</a>
+      <a href="rules.html"><span style="color: #000000;">R</span>ULES</a>
+      <a href="ladder.html"><span style="color: #000000;">L</span>ADDER</a>
+      <a href="scores.html"><span style="color: #000000;">S</span>CORES</a>
+      <a href="trades.html"><span style="color: #000000;">T</span>RADES</a>
+      <a href="stats.html"><span style="color: #000000;">S</span>TATS</a>
+      <a href="teams.html"><span style="color: #000000;">T</span>EAMS</a>
+      <a href="draft.html"><span style="color: #000000;">DRAFT</span></a>
+      <a href="availability.html"><span style="color: #000000;">A</span>VAILABILITY</a>
+      <a href="motm.html"><span style="color: #000000;">M</span>OTM</a>
+      <a href="history.html"><span style="color: #000000;">H</span>ALL OF FAME</a>
+      
+      <br><br><br>
+      
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:center;color: white !important;background-color: #000000 !important;"> # </th>
+   <th style="text-align:left;color: white !important;background-color: #000000 !important;"> Coach </th>
+   <th style="text-align:left;color: white !important;background-color: #000000 !important;"> Selection </th>
+   <th style="text-align:left;color: white !important;background-color: #000000 !important;"> Team </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 1 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Marcus </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Brisbane Lions </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 2 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Thomas </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> West Coast </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 3 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Peter </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Fremantle </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 4 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Chantel </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Richmond </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 5 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Lachy </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Port Adelaide </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 6 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Chirag </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Geelong </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 7 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Stuart </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Melbourne </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 8 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Michael </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> St Kilda </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 9 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Cath </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Collingwood </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 10 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Cath </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Jack Riewoldt </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Richmond </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 11 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Michael </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Tom Hawkins </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Geelong </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 12 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Stuart </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Charlie Cameron </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Brisbane Lions </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 13 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Chirag </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Charlie Dixon </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Port Adelaide </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 14 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Lachy </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Max King </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> St Kilda </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 15 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Chantel </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Luke Breust </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Hawthorn </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 16 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Peter </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Harry McKay </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Carlton </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 17 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Thomas </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Tom J. Lynch </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Richmond </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 18 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Marcus </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Josh J. Kennedy </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> West Coast </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 19 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Marcus </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Jack Darling </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> West Coast </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 20 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Thomas </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Tom Papley </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Sydney </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 21 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Peter </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Jeremy Cameron </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Geelong </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 22 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Chantel </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Robbie Gray </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Port Adelaide </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 23 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Lachy </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Joe Daniher </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Brisbane Lions </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 24 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Chirag </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Jack Gunston </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Hawthorn </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 25 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Stuart </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Ben King </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Gold Coast </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 26 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Michael </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Ben Brown </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Melbourne </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 27 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Cath </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Mitch Wallis </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Footscray </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 28 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Cath </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Patrick Dangerfield </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Geelong </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 29 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Michael </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Eric Hipwood </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Brisbane Lions </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 30 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Stuart </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Zac Fisher </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Carlton </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 31 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Chirag </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Anthony McDonald-Tipungwuti </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Essendon </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 32 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Lachy </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Matt Taberner </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Fremantle </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 33 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Chantel </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Dustin Martin </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Richmond </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 34 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Peter </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Oscar Allen </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> West Coast </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 35 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Thomas </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Liam Ryan </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> West Coast </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 36 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Marcus </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Tim Membrey </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> St Kilda </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 37 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Marcus </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Alex Sexton </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Gold Coast </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 38 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Thomas </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Jordan De Goey </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Collingwood </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 39 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Peter </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Chad Wingard </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Hawthorn </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 40 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Chantel </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Marcus Bontempelli </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Footscray </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 41 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Lachy </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Dan Butler </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> St Kilda </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 42 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Chirag </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Brody Mihocek </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Collingwood </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 43 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Stuart </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Jeremy Finlayson </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> GWS </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 44 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Michael </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Harry Himmelberg </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> GWS </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 45 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Cath </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Gary Rohan </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Geelong </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 46 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Cath </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Aaron Naughton </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Footscray </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 47 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Michael </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Toby Greene </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> GWS </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 48 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Stuart </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Jaidyn Stephenson </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> North Melbourne </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 49 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Chirag </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Hugh McCluggage </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Brisbane Lions </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 50 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Lachy </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Nick Larkey </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> North Melbourne </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 51 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Chantel </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Marc Murphy </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Carlton </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 52 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Peter </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Michael Walters </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Fremantle </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 53 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Thomas </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Jake Stringer </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Essendon </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 54 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Marcus </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Christian Petracca </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Melbourne </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 55 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Marcus </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Jack Martin </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Carlton </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 56 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Thomas </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Mitch Lewis </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Hawthorn </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 57 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Peter </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Cam Rayner </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Brisbane Lions </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 58 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Chantel </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Gryan Miers </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Geelong </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 59 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Lachy </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Izak Rankine </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Gold Coast </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 60 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Chirag </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Alec Waterman </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Essendon </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 61 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Stuart </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Taylor Walker </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Adelaide </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 62 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Michael </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Jason Castagna </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Richmond </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 25px; color: black !important;background-color: #ffff !important;font-size: 12px;"> 63 </td>
+   <td style="text-align:left;width: 80px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Cath </td>
+   <td style="text-align:left;width: 175px; color: black !important;background-color: #ffff !important;font-size: 12px;"> Jamie Cripps </td>
+   <td style="text-align:left;width: 100px; color: black !important;background-color: #ffff !important;font-size: 12px;"> West Coast </td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+</html>

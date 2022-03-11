@@ -69,3 +69,15 @@ for (i in 1:18){
   if(i > 1) { squadLists <- rbind(squadLists, tempPlayers) }
   
 }
+
+
+# Checks
+
+squadLists %>% group_by(Team) %>% summarise(n=n())
+
+
+### Output to file.
+#save(squadLists, file = here("data",paste0("squadLists_",year(today()),".Rdata")))
+
+
+
