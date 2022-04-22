@@ -9,9 +9,9 @@ library(lubridate)
 library(here)
 library(stringdist)
 
-ssn = 2021
+ssn = 2022
 
-load(here("data","squadLists.Rdata"))
+load(here("data",paste0("squadLists_",ssn,".Rdata")))
 
 draftSelections <- read.csv(here("data","draft.csv"), na.strings = "") %>% 
   rename("SelectionOrder"="Pick","Selection"="Player") %>% 
@@ -20,20 +20,22 @@ draftSelections <- read.csv(here("data","draft.csv"), na.strings = "") %>%
 draftSelections <- draftSelections %>% mutate(Team = replace_teams(Team),
                                               Selection = ifelse(is.na(Team)==T,replace_teams(Selection),Selection))
 
-#TRADES
-Trades <- read.csv(here("data","trades.csv"), na.strings = "", check.names = F)
+#TRADES (in form: tradeDt, coach, out, in, team)
+Trades <- read.csv(here("data","trades.csv"), na.strings = "", check.names = F) %>% mutate_all(.,trimws)
 
 liveScores_Temp <- fetch_player_stats(season = ssn, source = "footywire")
 
-maxRound <- liveScores_Temp %>% 
-  mutate(Round = as.integer(regmatches(Round, gregexpr("[[:digit:]]+", Round)))) %>% 
-  summarise(max(Round)) %>% pull()
+# maxRound <- liveScores_Temp %>% 
+#   mutate(Round = as.integer(regmatches(Round, gregexpr("[[:digit:]]+", Round)))) %>% 
+#   summarise(max(Round)) %>% pull()
          
 roundDetails <- fetch_fixture(season = ssn, source = "footywire") %>%
   mutate(Season = year(Date),
          Date = as.Date(Date)) %>% 
   group_by(Season, Round) %>% 
   summarise(roundStart = min(Date))
+
+maxRound <- roundDetails %>% filter(roundStart <= today()) %>% summarise(max(Round)) %>% pull()
 
 if(exists("Trades") == T) {
   
@@ -43,7 +45,7 @@ if(exists("Trades") == T) {
       
       minDate <- roundDetails %>% filter(Round == r) %>% mutate(roundStart = as.character(roundStart)) %>% pull(roundStart)
       if(r > 1) { prvDate <- roundDetails %>% filter(Round == r - 1) %>% mutate(roundStart = as.character(roundStart)) %>% pull(roundStart)}
-      if(r == 1) { prvDate <- "2021-01-01" }
+      if(r == 1) { prvDate <- "2022-01-01" }
         
       roundTrades <- tempTrades %>% filter(tradeDt <= minDate & tradeDt > prvDate)
       
@@ -84,12 +86,19 @@ playerScore <- liveScores_Temp %>%
          Round = as.integer(regmatches(Round, gregexpr("[[:digit:]]+", Round)))) %>% 
   rename(Points = G) %>% 
   left_join(., squadLists, by="Team") %>% 
+  mutate(Player.y = gsub("[a-z]*(?=\\-)","",Player.y, perl=TRUE)) %>% 
   mutate(correct = stringdist(Player.x, Player.y, method = c("lv"))) %>% 
+  #filter(correct <= 7) %>% 
   group_by(Round, Player.x, Team) %>% 
   slice(which.min(correct)) %>%
   ungroup() %>% 
   select(Round, Player.y, Team, Points) %>% 
-  left_join(Teams %>% filter(is.na(Team)==F),.,by=c("Round","Selection"="Player.y","Team"))
+  left_join(Teams %>% filter(is.na(Team)==F),.,by=c("Round","Selection"="Player.y","Team")) %>% 
+  group_by(Round, Coach) %>% 
+  mutate(best = rank(-Points,ties.method = "random")) %>% 
+  ungroup() %>% 
+  filter(best != 6) %>% 
+  select(-best)
 
 teamScore <- liveScores_Temp %>% 
   group_by(Round, Opposition) %>% 
@@ -194,7 +203,7 @@ playerStatus <- squadLists %>%
 ### PRINT SCORES
 Scores %>% filter(Round == maxRound) %>% select(-Round) %>% arrange(-Points)
 Ladder %>% arrange(-Points)
-#Scores %>% filter(Round %in% c(3,4,5,6,7)) %>% group_by(Coach) %>% summarise(Points = sum(Points)) %>% arrange(-Points)
+Scores %>% filter(Round %in% c(4,5,6,7)) %>% group_by(Coach) %>% summarise(Points = sum(Points)) %>% arrange(-Points)
 #Scores %>% filter(Round %in% c(8,9,10,11)) %>% group_by(Coach) %>% summarise(Points = sum(Points)) %>% arrange(-Points)
 #Scores %>% filter(Round %in% c(12,13,14,15)) %>% group_by(Coach) %>% summarise(Points = sum(Points)) %>% arrange(-Points)
-Scores %>% filter(Round %in% c(16,17,18,19,20)) %>% group_by(Coach) %>% summarise(Points = sum(Points)) %>% arrange(-Points)
+#Scores %>% filter(Round %in% c(16,17,18,19,20)) %>% group_by(Coach) %>% summarise(Points = sum(Points)) %>% arrange(-Points)

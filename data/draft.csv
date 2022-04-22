@@ -1,64 +1,64 @@
 Player,Team,Pick,Coach
-Jack Riewoldt,Richmond,10,Cath
-Tom Hawkins,Geelong,11,Michael
-Charlie Cameron,Brisbane Lions,12,Stuart
-Charlie Dixon,Port Adelaide,13,Chirag
-Max King,St Kilda,14,Lachy
-Luke Breust,Hawthorn,15,Chantel
-Harry McKay,Carlton,16,Peter
-Tom J. Lynch,Richmond,17,Thomas
-Josh J. Kennedy,West Coast,18,Marcus
-Jack Darling,West Coast,19,Marcus
-Tom Papley,Sydney,20,Thomas
-Jeremy Cameron,Geelong,21,Peter
-Robbie Gray,Port Adelaide,22,Chantel
-Joe Daniher,Brisbane Lions,23,Lachy
-Jack Gunston,Hawthorn,24,Chirag
-Ben King,Gold Coast,25,Stuart
-Ben Brown,Melbourne,26,Michael
-Mitch Wallis,Footscray,27,Cath
-Patrick Dangerfield,Geelong,28,Cath
-Eric Hipwood,Brisbane Lions,29,Michael
-Zac Fisher,Carlton,30,Stuart
-Anthony McDonald-Tipungwuti,Essendon,31,Chirag
-Matt Taberner,Fremantle,32,Lachy
-Dustin Martin,Richmond,33,Chantel
-Oscar Allen,West Coast,34,Peter
-Liam Ryan,West Coast,35,Thomas
-Tim Membrey,St Kilda,36,Marcus
-Alex Sexton,Gold Coast,37,Marcus
-Jordan De Goey,Collingwood,38,Thomas
-Chad Wingard,Hawthorn,39,Peter
-Marcus Bontempelli,Footscray,40,Chantel
-Dan Butler,St Kilda,41,Lachy
-Brody Mihocek,Collingwood,42,Chirag
-Jeremy Finlayson,GWS,43,Stuart
-Harry Himmelberg,GWS,44,Michael
-Gary Rohan,Geelong,45,Cath
-Aaron Naughton,Footscray,46,Cath
-Toby Greene,GWS,47,Michael
-Jaidyn Stephenson,North Melbourne,48,Stuart
-Hugh McCluggage,Brisbane Lions,49,Chirag
-Nick Larkey,North Melbourne,50,Lachy
-Marc Murphy,Carlton,51,Chantel
-Michael Walters,Fremantle,52,Peter
-Jake Stringer,Essendon,53,Thomas
-Christian Petracca,Melbourne,54,Marcus
-Jack Martin,Carlton,55,Marcus
-Mitch Lewis,Hawthorn,56,Thomas
-Cam Rayner,Brisbane Lions,57,Peter
-Gryan Miers,Geelong,58,Chantel
-Izak Rankine,Gold Coast,59,Lachy
-Alec Waterman,Essendon,60,Chirag
-Taylor Walker,Adelaide,61,Stuart
-Jason Castagna,Richmond,62,Michael
-Jamie Cripps,West Coast,63,Cath
-Brisbane Lions,,1,Marcus
-West Coast,,2,Thomas
-Fremantle,,3,Peter
-Richmond,,4,Chantel
-Port Adelaide,,5,Lachy
-Geelong,,6,Chirag
-Melbourne,,7,Stuart
-St Kilda,,8,Michael
-Collingwood,,9,Cath
+Melbourne,,1,Stuart
+Port Adelaide,,2,Peter
+Geelong,,3,Thomas
+Footscray,,4,Michael H
+Brisbane,,5,Cath
+Sydney,,6,Lachlan
+GWS,,7,Marcus
+Harry McKay,Carlton,8,Michael D
+Richmond,,9,Chantel
+Tom Hawkins,Geelong,10,Chantel
+Carlton,,11,Michael D
+Charlie Cameron,Brisbane,12,Marcus
+Lance Franklin,Sydney,13,Lachlan
+Charlie Dixon,Port Adelaide,14,Cath
+Aaron Naughton,Footscray,15,Michael H
+Bayley Fritsch,Melbourne,16,Thomas
+Jeremy Cameron,Geelong,17,Peter
+Max King,St Kilda,18,Stuart
+Joe Daniher,Brisbane,19,Stuart
+Tom Papley,Sydney,20,Peter
+Jack Riewoldt,Richmond,21,Thomas
+Tom J. Lynch,Richmond,22,Michael H
+Josh J. Kennedy,West Coast,23,Cath
+Matt Taberner,Fremantle,24,Lachlan
+Nick Larkey,North Melbourne,25,Marcus
+Jake Stringer,Essendon,26,Michael D
+Jack Gunston,Hawthorn,27,Chantel
+Mitch Georgiades,Port Adelaide,28,Chantel
+Toby Greene,GWS,29,Michael D
+Ben Brown,Melbourne,30,Marcus
+Peter Wright,Essendon,31,Lachlan
+Tim Membrey,St Kilda,32,Cath
+Jesse Hogan,GWS,33,Michael H
+Jack Darling,West Coast,34,Thomas
+Jamie Elliott,Collingwood,35,Peter
+Isaac Heeney,Sydney,36,Stuart
+Tom McDonald,Melbourne,37,Stuart
+Patrick Cripps,Carlton,38,Peter
+Kysaiah Pickett,Melbourne,39,Thomas
+Liam Ryan,West Coast,40,Michael H
+Harry Himmelberg,GWS,41,Cath
+Brody Mihocek,Collingwood,42,Lachlan
+Charlie Curnow,Carlton,43,Marcus
+Lincoln McCarthy,Brisbane,44,Michael D
+Luke Breust,Hawthorn,45,Chantel
+Jordan De Goey,Collingwood,46,Chantel
+Gary Rohan,Geelong,47,Michael D
+Oscar Allen,West Coast,48,Marcus
+Cooper Sharman,St Kilda,49,Lachlan
+Christian Petracca,Melbourne,50,Cath
+Eric Hipwood,Brisbane,51,Michael H
+Cameron Zurhaar,North Melbourne,52,Thomas
+Zac Bailey,Brisbane,53,Peter
+Jack Lukosius,Gold Coast,54,Stuart
+Bailey Smith,Footscray,55,Stuart
+Marcus Bontempelli,Footscray,56,Peter
+Jeremy Finlayson,Port Adelaide,57,Thomas
+Riley Thilthorpe,Adelaide,58,Michael H
+Cody Weightman,Footscray,59,Cath
+Jake Riccardi,GWS,60,Lachlan
+Robbie Gray,Port Adelaide,61,Marcus
+Daniel McStay,Brisbane,62,Michael D
+Dustin Martin,Richmond,63,Chantel
