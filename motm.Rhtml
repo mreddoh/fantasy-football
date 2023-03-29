@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Fantasy Football | 2022</title>
+    <title>Fantasy Football | 2023</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
   </head>
     <style>
@@ -49,7 +49,7 @@
         border-bottom: none;
       }
     </style>
-    <h1>Fantasy Football <span style="color: #AAAAAA;">| 2022</span></h1>
+    <h1>Fantasy Football <span style="color: #AAAAAA;">| 2023</span></h1>
 
       <a href="index.html"><span style="color: #000000;">H</span>OME</a>
       <a href="rules.html"><span style="color: #000000;">R</span>ULES</a>
@@ -70,10 +70,10 @@
 library(kableExtra)
 
 MOTM <- roundDetails %>% ungroup() %>% filter(roundStart < today()) %>% 
-  mutate(MOTM = case_when(substr(roundStart,1,7) == "2022-04" ~ "Manager of the Month | April",
-                          substr(roundStart,1,7) == "2022-05" ~ "Manager of the Month | May",
-                          substr(roundStart,1,7) == "2022-06" ~ "Manager of the Month | June",
-                          substr(roundStart,1,7) == "2022-07" ~ "Manager of the Month | July",
+  mutate(MOTM = case_when(substr(roundStart,1,7) == "2023-04" ~ "Manager of the Month | April",
+                          substr(roundStart,1,7) == "2023-05" ~ "Manager of the Month | May",
+                          substr(roundStart,1,7) == "2023-07" ~ "Manager of the Month | July",
+                          substr(roundStart,1,7) == "2023-08" ~ "Manager of the Month | August",
                           TRUE ~ "EXCLUDE")) %>% 
   filter(MOTM != "EXCLUDE") %>% 
   select(Round,MOTM)

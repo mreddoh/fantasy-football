@@ -7,6 +7,11 @@ library(tidyverse)
 # CREATE DATASETS ----
 source(here("scripts","createScores_fw.R"))
 
+### PRINT SCORES
+Scores %>% filter(Round == maxRound) %>% select(-Round) %>% arrange(-Points)
+Ladder %>% arrange(-Points)
+
+
 # CREATE HTML FILES ----
 knit(here("trades.Rhtml"), here("html","trades.html"))
 knit(here("teams.Rhtml"), here("html","teams.html"))

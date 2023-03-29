@@ -77,7 +77,7 @@ squadLists %>% group_by(Team) %>% summarise(n=n())
 
 
 ### Output to file.
-#save(squadLists, file = here("data",paste0("squadLists_",year(today()),".Rdata")))
+save(squadLists, file = here("data",paste0("squadLists_",year(today()),".Rdata")))
 
 
 

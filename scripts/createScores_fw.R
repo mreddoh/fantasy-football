@@ -9,7 +9,7 @@ library(lubridate)
 library(here)
 library(stringdist)
 
-ssn = 2022
+ssn = 2023
 
 load(here("data",paste0("squadLists_",ssn,".Rdata")))
 
@@ -71,7 +71,9 @@ if(exists("Trades") == T) {
   
 }
 
-if(exists("Trades") == F) {
+if(exists("Trades") == F | nrow(Trades) == 0) {
+  
+  if(length(maxRound)==0) { maxRound <- 1 }
   
   Teams <- draftSelections %>% 
     left_join(.,tibble(Round = 1:maxRound),by=character())
@@ -99,6 +101,21 @@ playerScore <- liveScores_Temp %>%
   ungroup() %>% 
   filter(best != 6) %>% 
   select(-best)
+
+playerScore.current <- liveScores_Temp %>% 
+  select(Round,Player,Team,G) %>% 
+  mutate(Team = replace_teams(Team),
+         Round = as.integer(regmatches(Round, gregexpr("[[:digit:]]+", Round)))) %>% 
+  rename(Points = G) %>% 
+  left_join(., squadLists, by="Team") %>% 
+  mutate(Player.y = gsub("[a-z]*(?=\\-)","",Player.y, perl=TRUE)) %>% 
+  mutate(correct = stringdist(Player.x, Player.y, method = c("lv"))) %>% 
+  #filter(correct <= 7) %>% 
+  group_by(Round, Player.x, Team) %>% 
+  slice(which.min(correct)) %>%
+  ungroup() %>% 
+  select(Round, Player.y, Team, Points) %>% 
+  left_join(Teams %>% filter(is.na(Team)==F),.,by=c("Round","Selection"="Player.y","Team")) %>% filter(Round == maxRound)
 
 teamScore <- liveScores_Temp %>% 
   group_by(Round, Opposition) %>% 
@@ -203,7 +220,7 @@ playerStatus <- squadLists %>%
 ### PRINT SCORES
 Scores %>% filter(Round == maxRound) %>% select(-Round) %>% arrange(-Points)
 Ladder %>% arrange(-Points)
-Scores %>% filter(Round %in% c(4,5,6,7)) %>% group_by(Coach) %>% summarise(Points = sum(Points)) %>% arrange(-Points)
+#Scores %>% filter(Round %in% c(4,5,6,7)) %>% group_by(Coach) %>% summarise(Points = sum(Points)) %>% arrange(-Points)
 #Scores %>% filter(Round %in% c(8,9,10,11)) %>% group_by(Coach) %>% summarise(Points = sum(Points)) %>% arrange(-Points)
 #Scores %>% filter(Round %in% c(12,13,14,15)) %>% group_by(Coach) %>% summarise(Points = sum(Points)) %>% arrange(-Points)
 #Scores %>% filter(Round %in% c(16,17,18,19,20)) %>% group_by(Coach) %>% summarise(Points = sum(Points)) %>% arrange(-Points)
