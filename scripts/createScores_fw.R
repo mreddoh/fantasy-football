@@ -174,12 +174,13 @@ top_fa_players <- liveScores_Temp %>%
          Round = as.integer(regmatches(Round, gregexpr("[[:digit:]]+", Round)))) %>% 
   rename(Points = G) %>% 
   left_join(., squadLists, by="Team") %>% 
+  mutate(Player.y = gsub("[a-z]*(?=\\-)","",Player.y, perl=TRUE)) %>% 
   mutate(correct = stringdist(Player.x, Player.y, method = c("lv"))) %>% 
-  group_by(Round, Player.x) %>% 
+  group_by(Round, Player.x, Team) %>% 
   slice(which.min(correct)) %>%
   ungroup() %>% 
-  select(Player.y, Points) %>% 
-  left_join(.,currentTeams %>% filter(is.na(Team)==F),by=c("Player.y"="Selection")) %>% 
+  select(Player.y, Points, Team) %>% 
+  left_join(.,currentTeams %>% filter(is.na(Team)==F),by=c("Player.y"="Selection","Team")) %>% 
   filter(is.na(Coach)==T) %>% 
   rename(Player = Player.y) %>% 
   group_by(Player) %>% 
@@ -211,8 +212,9 @@ top_fa_teams <- liveScores_Temp %>%
   select(`Team Defence`, Points)
 
 playerStatus <- squadLists %>% 
+  mutate(Player.link = gsub("[a-z]*(?=\\-)","",Player, perl=TRUE)) %>% 
   unique() %>% 
-  left_join(., currentTeams, by=c("Player"="Selection","Team")) %>% 
+  left_join(., currentTeams, by=c("Player.link"="Selection","Team")) %>% 
   mutate(Status = ifelse(is.na(Coach)==F, paste0("Not Available (",Coach,")"), "Free Agent (Available)")) %>% 
   select(Player, Team, Status)
 
@@ -222,5 +224,5 @@ Scores %>% filter(Round == maxRound) %>% select(-Round) %>% arrange(-Points)
 Ladder %>% arrange(-Points)
 #Scores %>% filter(Round %in% c(4,5,6,7)) %>% group_by(Coach) %>% summarise(Points = sum(Points)) %>% arrange(-Points)
 #Scores %>% filter(Round %in% c(8,9,10,11)) %>% group_by(Coach) %>% summarise(Points = sum(Points)) %>% arrange(-Points)
-#Scores %>% filter(Round %in% c(12,13,14,15)) %>% group_by(Coach) %>% summarise(Points = sum(Points)) %>% arrange(-Points)
-#Scores %>% filter(Round %in% c(16,17,18,19,20)) %>% group_by(Coach) %>% summarise(Points = sum(Points)) %>% arrange(-Points)
+#Scores %>% filter(Round %in% c(17,18,19,20)) %>% group_by(Coach) %>% summarise(Points = sum(Points)) %>% arrange(-Points)
+#Scores %>% filter(Round %in% c(21,22,23,24)) %>% group_by(Coach) %>% summarise(Points = sum(Points)) %>% arrange(-Points)
