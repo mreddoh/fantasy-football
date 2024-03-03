@@ -5,9 +5,9 @@ library(here)
 library(fitzRoy)
 
 
-# GET STATS FROM PREVIOUS 2 YEARS ----
+# GET STATS FROM PREVIOUS SEASON ----
 
-player_stats_raw <- fetch_player_stats(season = 2022,
+player_stats_raw <- fetch_player_stats(season = 2024,
                                        comp = "AFLM",
                                        source = "footywire")
 

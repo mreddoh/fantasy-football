@@ -9,7 +9,7 @@ library(lubridate)
 library(here)
 library(stringdist)
 
-ssn = 2023
+ssn = 2024
 
 load(here("data",paste0("squadLists_",ssn,".Rdata")))
 
